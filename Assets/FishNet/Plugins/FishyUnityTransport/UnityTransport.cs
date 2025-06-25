@@ -999,8 +999,6 @@ namespace FishNet.Transporting.UTP
 
                 if (m_Driver.Disconnect(ParseClientId(m_ServerClientId)) == 0)
                 {
-                    m_State = State.Disconnected;
-
                     m_ReliableReceiveQueues.Remove(m_ServerClientId);
                     ClearSendQueuesForClientId(m_ServerClientId);
 
